@@ -1,0 +1,30 @@
+{
+    "identityId": "2e247ea01c864797818b2b554f69c81c",
+    "capturedAt": "2026-01-28T15:29:02.243001",
+    "accounts": [
+        {
+            "accountId": "2fd55f2a2e394d0183945448e905c0d8",
+            "source": "Jdbc test VA",
+            "entitlements": [
+                "input"
+            ]
+        },
+        {
+            "accountId": "59cb70efb84b460c9140060d51b86323",
+            "source": "JDBCRedeploy3",
+            "entitlements": [
+                "input"
+            ]
+        },
+        {
+            "accountId": "a8c129721ab44f1793a2583dc98442f5",
+            "source": "ADsource1",
+            "entitlements": [
+                "CN=Terminal Server License Servers,CN=Builtin,DC=idmtdc,DC=com",
+                "CN=Certificate Service DCOM Access,CN=Builtin,DC=idmtdc,DC=com",
+                "CN=Backup Operators,CN=Builtin,DC=idmtdc,DC=com",
+                "CN=Users,CN=Builtin,DC=idmtdc,DC=com"
+            ]
+        }
+    ]
+}

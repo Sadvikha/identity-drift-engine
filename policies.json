@@ -1,0 +1,6 @@
+{
+  "highRiskKeywords": ["admin", "root", "finance", "payroll"],
+  "mediumRiskKeywords": ["write", "modify", "update"],
+  "autoRemediate": false,
+  "requireManagerApproval": true
+}
