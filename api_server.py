@@ -36,10 +36,21 @@ def create_baseline():
 # Run Full Pipeline
 # -----------------------
 
+#@app.post("/run")
+#def run_pipeline():
+   # subprocess.run(["python", "orchestrator.py"])
+   # return {"drifts": drifts }
 @app.post("/run")
 def run_pipeline():
-    subprocess.run(["python", "orchestrator.py"])
-    return {"drifts": drifts }
+    subprocess.run(["python", "orchestrator.py"], check=True)
+
+    if os.path.exists("drift.json"):
+        with open("drift.json") as f:
+            drifts = json.load(f)
+    else:
+        drifts = []
+
+    return {"drifts": drifts}
 
 
 # -----------------------
