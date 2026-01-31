@@ -11,3 +11,20 @@ else:
 
     print("Running drift detection...")
     subprocess.run(["python", "drift_detector.py"])
+
+
+import json
+
+drifts = [
+    {
+        "riskLevel": "HIGH",
+        "accountId": "demo-user",
+        "entitlement": "Domain Admin",
+        "recommendedAction": "Remove Access"
+    }
+]
+
+with open("drift.json", "w") as f:
+    json.dump(drifts, f)
+
+print("Injected demo drift")
