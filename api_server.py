@@ -39,7 +39,8 @@ def create_baseline():
 @app.post("/run")
 def run_pipeline():
     subprocess.run(["python", "orchestrator.py"])
-    return {"message": "Pipeline executed"}
+    return {"drifts": drifts }
+
 
 # -----------------------
 # Run Drift Detection Only
