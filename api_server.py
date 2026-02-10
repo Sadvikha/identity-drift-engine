@@ -36,10 +36,6 @@ def create_baseline():
 # Run Full Pipeline
 # -----------------------
 
-#@app.post("/run")
-#def run_pipeline():
-   # subprocess.run(["python", "orchestrator.py"])
-   # return {"drifts": drifts }
 @app.post("/run")
 def run_pipeline():
     subprocess.run(["python", "orchestrator.py"])

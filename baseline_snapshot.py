@@ -1,13 +1,20 @@
 import requests
 import json
 from datetime import datetime
+import os
 
-TENANT = "partner5799"
+from dotenv import load_dotenv
 
-CLIENT_ID = "002e5667-ea34-49d7-8062-316a1f393bd7"
-CLIENT_SECRET = "df902a30abe46742afaa001b560f07f3bef50831434c0b676650a191eb6874c5"
+load_dotenv()  # Loads from .env file
 
-IDENTITY_ID = "2e247ea01c864797818b2b554f69c81c"
+TENANT = os.getenv("SAILPOINT_TENANT", "partner5799")  # Optional fallback for tenant
+CLIENT_ID = os.getenv("SAILPOINT_CLIENT_ID")
+CLIENT_SECRET = os.getenv("SAILPOINT_CLIENT_SECRET")
+IDENTITY_ID = os.getenv("SAILPOINT_IDENTITY_ID")
+
+# Safety check (add this)
+if not CLIENT_ID or not CLIENT_SECRET:
+    raise ValueError("Missing required SailPoint credentials in environment variables")
 
 def get_token():
     url = f"https://partner5799.api.identitynow-demo.com/oauth/token"
