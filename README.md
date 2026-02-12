@@ -122,6 +122,7 @@ Send Email for HIGH Risk
 
 ## 📂 Project Structure
 
+```json
 identity-drift-engine/
 │
 ├── api_server.py # FastAPI service
@@ -133,7 +134,7 @@ identity-drift-engine/
 ├── baseline.json # Stored baseline
 ├── current.json # Latest snapshot
 └── requirements.txt
-
+```
 
 
 ---
@@ -208,19 +209,19 @@ Simple policy-based classification rules:
 
 Example:
 
--> Entitlements containing "Admin"
+- Entitlements containing "Admin"
 
--> Privileged group assignments
+- Privileged group assignments
 
--> Sensitive access keywords
+- Sensitive access keywords
 
 Each drift event is enriched with:
 
--> Risk Level (LOW / MEDIUM / HIGH)
+- Risk Level (LOW / MEDIUM / HIGH)
 
--> Event Type
+- Event Type
 
--> Recommended Action
+- Recommended Action
 
 The logic is fully extensible.
 
@@ -240,91 +241,93 @@ Endpoint	Method	Description
 
 
 ---
-##🚀 Running Locally
+## 🚀 Running Locally
 
-#1️⃣ Install Dependencies
+### 1️⃣ Install Dependencies
 pip install -r requirements.txt
 
-#2️⃣ Start FastAPI Server
+### 2️⃣ Start FastAPI Server
 uvicorn api_server:app --reload
 
 
+``json 
 Access Swagger UI:
 
 http://127.0.0.1:8000/docs
+```
 
-#3️⃣ Create Baseline
+### 3️⃣ Create Baseline
 POST /baseline
 
-#4️⃣ Run Full Pipeline
+### 4️⃣ Run Full Pipeline
 POST /run
 
-#5️⃣ View Drift Report
+### 5️⃣ View Drift Report
 GET /drift/report
 
 ---
-###🔗 SailPoint Workflow Integration
+## 🔗 SailPoint Workflow Integration
 
 A SailPoint Identity Security Cloud workflow is configured to:
 
-Trigger after account aggregation completion
+- Trigger after account aggregation completion
 
-Call the FastAPI endpoint using HTTP action
+- Call the FastAPI endpoint using HTTP action
 
-Iterate over returned drift results
+- Iterate over returned drift results
 
-Filter HIGH-risk items
+- Filter HIGH-risk items
 
-Send email notifications
+- Send email notifications
 
 ---
-###🛡️ Governance Philosophy
+## 🛡️ Governance Philosophy
 
 This system intentionally follows a human-in-the-loop automation model.
 
 Automation is used for:
 
-> Detection
+- Detection
 
-> Classification
+- Classification
 
-> Alerting
+- Alerting
 
-> Human decision-making is used for:
+- Human decision-making is used for:
 
-> Remediation
+- Remediation
 
-> Approval
+- Approval
 
-> Access removal
+- Access removal
 
 This avoids over-automation risks while improving response time.
 
 ---
 
-###📊 Extensibility
+### 📊 Extensibility
 
 Future enhancements may include:
 
-> Approval workflow integration
+- Approval workflow integration
 
-> Auto-remediation policies
+- Auto-remediation policies
 
-> Access request creation
+- Access request creation
 
-> Certification trigger automation
+- Certification trigger automation
 
-> AI-based risk scoring
+- AI-based risk scoring
 
-> Dashboard visualization layer
+- Dashboard visualization layer
 
-> Persistent database storage
+- Persistent database storage
 
-> Event streaming architecture
+- Event streaming architecture
 
 ---
 
-###🧠 Key Design Principles
+## 🧠 Key Design Principles
 
 Externalize complex logic
 
@@ -340,44 +343,44 @@ Design for auditability
 
 ---
 
-###📌 Limitations
+## 📌 Limitations
 
-No persistent database (JSON storage)
+- No persistent database (JSON storage)
 
-No real-time streaming architecture
+- No real-time streaming architecture
 
-Rule-based risk scoring only
+- Rule-based risk scoring only
 
-No automated remediation
+- No automated remediation
 
-Single-tenant test setup
-
----
-###🎯 Intended Use Case
-
-This project is ideal for:
-
-Developers extending identity platforms
-
-Architects designing adaptive identity workflows
-
-Security teams seeking lightweight drift monitoring
-
-Identity governance proof-of-concepts
+- Single-tenant test setup
 
 ---
-###🏁 Conclusion
+## 🎯 Intended Use Case
 
-The Identity Drift Engine demonstrates how to:
+- This project is ideal for:
 
-Extend identity workflows through APIs
+- Developers extending identity platforms
 
-Detect access drift in near-real time
+- Architects designing adaptive identity workflows
 
-Integrate external services with SailPoint
+- Security teams seeking lightweight drift monitoring
 
-Implement governance-aligned automation
+- Identity governance proof-of-concepts
 
-Build adaptive identity systems safely
+---
+## 🏁 Conclusion
+
+- The Identity Drift Engine demonstrates how to:
+
+- Extend identity workflows through APIs
+
+- Detect access drift in near-real time
+
+- Integrate external services with SailPoint
+
+- Implement governance-aligned automation
+
+- Build adaptive identity systems safely
 
 It is a practical, developer-driven implementation of platform extensibility in identity security.
