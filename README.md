@@ -251,9 +251,9 @@ uvicorn api_server:app --reload
 
 
 ``json 
-Access Swagger UI:
+    Access Swagger UI:
 
-http://127.0.0.1:8000/docs
+    http://127.0.0.1:8000/docs
 ```
 
 ### 3️⃣ Create Baseline
