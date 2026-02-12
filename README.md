@@ -102,19 +102,19 @@ Responsible for:
 
 ## 🔄 High-Level Flow
 
-Account Aggregation Completed
+-- Account Aggregation Completed
 ↓
-SailPoint Workflow Trigger
+-- SailPoint Workflow Trigger
 ↓
-HTTP Call → FastAPI Drift Engine
+-- HTTP Call → FastAPI Drift Engine
 ↓
-Drift Detection + Risk Classification
+-- Drift Detection + Risk Classification
 ↓
-Return Structured Drift JSON
+-- Return Structured Drift JSON
 ↓
-Workflow Loop
+-- Workflow Loop
 ↓
-Send Email for HIGH Risk
+-- Send Email for HIGH Risk
 
 
 
@@ -230,14 +230,15 @@ The logic is fully extensible.
 
 ### 6️⃣ FastAPI Service
 
-The drift engine is exposed via REST endpoints:
+The Drift Engine is exposed via the following REST endpoints:
 
-Endpoint	Method	Description
-/health	        GET	Health check
-/baseline	POST	Create baseline snapshot
-/run	        POST	Execute full pipeline
-/drift	        POST	Run drift detection only
-/drift/report	GET	Retrieve drift results
+| Endpoint          | Method | Description                          |
+|-------------------|--------|--------------------------------------|
+| `/health`         | GET    | Health check                         |
+| `/baseline`       | POST   | Create baseline snapshot             |
+| `/run`            | POST   | Execute full pipeline                |
+| `/drift`          | POST   | Run drift detection only             |
+| `/drift/report`   | GET    | Retrieve drift results               |
 
 
 ---
