@@ -250,7 +250,7 @@ pip install -r requirements.txt
 uvicorn api_server:app --reload
 
 
-``json 
+```json 
     Access Swagger UI:
 
     http://127.0.0.1:8000/docs
