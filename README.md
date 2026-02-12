@@ -102,19 +102,19 @@ Responsible for:
 
 ## 🔄 High-Level Flow
 
--- Account Aggregation Completed
+- Account Aggregation Completed
 ↓
--- SailPoint Workflow Trigger
+- SailPoint Workflow Trigger
 ↓
--- HTTP Call → FastAPI Drift Engine
+- HTTP Call → FastAPI Drift Engine
 ↓
--- Drift Detection + Risk Classification
+- Drift Detection + Risk Classification
 ↓
--- Return Structured Drift JSON
+- Return Structured Drift JSON
 ↓
--- Workflow Loop
+- Workflow Loop
 ↓
--- Send Email for HIGH Risk
+- Send Email for HIGH Risk
 
 
 
