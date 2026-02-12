@@ -329,17 +329,17 @@ Future enhancements may include:
 
 ## 🧠 Key Design Principles
 
-Externalize complex logic
+- Externalize complex logic
 
-Keep identity platform clean
+- Keep identity platform clean
 
-Use APIs for extensibility
+- Use APIs for extensibility
 
-Separate detection from remediation
+- Separate detection from remediation
 
-Prefer safe automation over aggressive automation
+- Prefer safe automation over aggressive automation
 
-Design for auditability
+- Design for auditability
 
 ---
 
@@ -358,7 +358,7 @@ Design for auditability
 ---
 ## 🎯 Intended Use Case
 
-- This project is ideal for:
+This project is ideal for:
 
 - Developers extending identity platforms
 
@@ -371,7 +371,7 @@ Design for auditability
 ---
 ## 🏁 Conclusion
 
-- The Identity Drift Engine demonstrates how to:
+The Identity Drift Engine demonstrates how to:
 
 - Extend identity workflows through APIs
 
